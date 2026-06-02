@@ -5,218 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ChemRender turns structured chemistry notes into clean molecule cards with arrows, lone pairs, functional groups, and desktop clipboard import."
+      content="ChemRender turns AI organic chemistry help into clean rendered chemistry cards for studying."
     />
     <title>ChemRender</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top" aria-label="ChemRender home">
-          <img src="./assets/logo.svg" alt="" width="28" height="28" />
-          <span>ChemRender</span>
-        </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#features">Features</a>
-          <a href="#workflow">Workflow</a>
-          <a href="#format">Format</a>
-          <a href="#desktop">Desktop</a>
-        </nav>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ChemRender home">
+        <img src="./assets/logo.png" alt="" width="42" height="31" />
+        <span>ChemRender</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#workflow">Workflow</a>
+        <a href="#examples">Examples</a>
+        <a href="#keybinds">Keybinds</a>
+        <a href="#download">Download</a>
+        <a href="#tutorials">Tutorials</a>
+        <a href="#try">Try</a>
+      </nav>
+    </header>
 
-      <main id="top">
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow">Desktop-first chemistry cards</p>
-            <h1>Turn structured chemistry notes into rendered cards.</h1>
-            <p class="lede">
-              ChemRender takes the molecule-card format used by LLMs and turns it into a clean,
-              inspectable workspace for lone pairs, charges, arrows, stereochemistry, and
-              functional-group highlighting.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#workflow">See the workflow</a>
-              <a class="button button-secondary" href="#desktop">Why desktop matters</a>
-            </div>
-            <dl class="hero-metrics">
-              <div>
-                <dt>Cards</dt>
-                <dd>Tabbed molecule packages with numbered render order</dd>
-              </div>
-              <div>
-                <dt>Annotations</dt>
-                <dd>Lone pairs, charges, arrows, aliases, and layout hints</dd>
-              </div>
-              <div>
-                <dt>Control</dt>
-                <dd>Keyboard shortcuts with editable preset sets</dd>
-              </div>
-            </dl>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI ochem help in, readable cards out</p>
+          <h1>Make AI organic chemistry explanations readable.</h1>
+          <p class="lede">
+            LLMs are great ochem tutors, but their chemistry drawings are often hard to study
+            from. ChemRender lets you press Copy Prompt, ask any LLM, paste the answer back in,
+            and get clean rendered chemistry cards.
+          </p>
+          <div class="actions">
+            <button class="button button-primary js-copy-prompt" type="button">Copy Prompt</button>
+            <a class="button button-secondary" href="#examples">See Examples</a>
           </div>
+          <p class="supporting-line">
+            Built for fast studying: one-button import, keyboard shortcuts, and flexible keybinds.
+          </p>
+          <p class="copy-status" role="status" aria-live="polite"></p>
+        </div>
+        <div class="hero-visual">
+          <img
+            src="./assets/resonance-example.png"
+            alt="ChemRender showing rendered resonance structures with arrows and study captions"
+          />
+        </div>
+      </section>
 
-          <div class="hero-visual">
-            <img
-              src="./assets/hero-illustration.svg"
-              alt="ChemRender interface illustration showing molecule cards, arrows, and functional groups"
-            />
-          </div>
-        </section>
+      <section class="section pain-section">
+        <div class="section-inner narrow">
+          <p class="eyebrow">The study problem</p>
+          <h2>AI can explain ochem. It just cannot draw it well.</h2>
+          <p>
+            ChatGPT, Claude, and other LLMs are patient and useful for walking through mechanisms,
+            resonance, acid/base logic, and stereochemistry. The problem is that their chemistry
+            representations often turn into ambiguous text, broken diagrams, or explanations that
+            are hard to review later. ChemRender fixes the visual layer.
+          </p>
+        </div>
+      </section>
 
-        <section class="band band-summary" aria-label="Project summary">
-          <div class="band-inner summary-grid">
-            <div class="summary-block">
-              <h2>What it offers</h2>
-              <p>
-                A focused renderer for study notes, mechanism walkthroughs, and LLM-generated
-                chemistry output.
-              </p>
-            </div>
-            <div class="summary-points">
-              <span>LLM-friendly card format</span>
-              <span>Functional group detection</span>
-              <span>SVG and PNG export</span>
-              <span>Custom keybinds</span>
-            </div>
-          </div>
-        </section>
-
-        <section id="features" class="section">
-          <div class="section-head">
-            <p class="eyebrow">Features</p>
-            <h2>Built for chemistry notes, not editing molecules by hand.</h2>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Rendered cards</h3>
-              <p>Molecule cards show titles, captions, lone pairs, charges, and atom labels.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Mechanism arrows</h3>
-              <p>Curved arrows resolve against atoms, bonds, and lone-pair anchors.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Functional groups</h3>
-              <p>Expanded views identify and highlight groups like alkenes, ketones, and aromatics.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Stereochemistry</h3>
-              <p>SMILES stereochemistry and ring geometry render cleanly for cis/trans and chiral examples.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Clipboard-first desktop app</h3>
-              <p>Install the macOS app for direct clipboard import from the keyboard with no paste prompt.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Custom controls</h3>
-              <p>Keybind presets, editable shortcuts, tab management, export settings, and a built-in tutorial.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="workflow" class="section split-section">
+      <section id="workflow" class="section">
+        <div class="section-inner">
           <div class="section-head">
             <p class="eyebrow">Workflow</p>
-            <h2>From LLM output to rendered cards in a few moves.</h2>
+            <h2>Copy prompt. Ask any LLM. Paste back clean chemistry.</h2>
           </div>
           <div class="workflow-grid">
-            <article class="workflow-step">
+            <article class="step-card">
               <span>1</span>
-              <h3>Write molecule cards</h3>
-              <p>Ask for `::mol` blocks with SMILES, lone pairs, charges, and captions.</p>
+              <h3>Copy the ChemRender prompt</h3>
+              <p>Press one button to copy the instruction prompt that tells your LLM how to answer for ChemRender.</p>
             </article>
-            <article class="workflow-step">
+            <article class="step-card">
               <span>2</span>
-              <h3>Import the package</h3>
-              <p>Open the package in the app, or use the desktop clipboard flow for immediate import.</p>
+              <h3>Ask your ochem question</h3>
+              <p>Resonance, mechanisms, stereochemistry, formal charges, functional groups, or whatever you are studying.</p>
             </article>
-            <article class="workflow-step">
+            <article class="step-card">
               <span>3</span>
-              <h3>Review the output</h3>
-              <p>Inspect rendered cards, warnings, arrows, and functional groups without editing atoms by hand.</p>
+              <h3>Paste the answer back</h3>
+              <p>Import the response with a button or keybind and keep moving.</p>
             </article>
-            <article class="workflow-step">
+            <article class="step-card">
               <span>4</span>
-              <h3>Copy or export</h3>
-              <p>Move cards back to notes or export SVG/PNG versions when you need them elsewhere.</p>
+              <h3>Study readable cards</h3>
+              <p>Review structures, captions, lone pairs, charges, arrows, and stereochemistry without decoding text diagrams.</p>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="format" class="section format-section">
+      <section id="examples" class="section examples-section">
+        <div class="section-inner">
           <div class="section-head">
-            <p class="eyebrow">Format</p>
-            <h2>The project uses a plain-text molecule-card syntax.</h2>
+            <p class="eyebrow">Examples</p>
+            <h2>Readable chemistry cards for the topics students actually review.</h2>
           </div>
-          <div class="format-grid">
-            <pre class="code-sample"><code>::mol
-title: Starting structure
-smiles: O=C1[C-]CCCC1
-lonepairs:
-  O1: 2
-  C2: 1
-charges:
-  C2: -
-arrows:
-  C2.lp1 -&gt; C1-C2 curve: left
-  C1-O1 -&gt; O1 curve: right
-caption: The carbon lone pair forms the new C=C pi bond to the carbonyl carbon.</code></pre>
-            <div class="format-notes">
-              <article>
-                <h3>What it resolves</h3>
-                <p>Atom order, aliases, bond endpoints, lone pairs, and arrow targets.</p>
-              </article>
-              <article>
-                <h3>What it avoids</h3>
-                <p>Guessing chemistry from text. It renders what the structure actually says.</p>
-              </article>
-              <article>
-                <h3>What it keeps</h3>
-                <p>Tabbed source packages, direct rendering, and the original note context.</p>
-              </article>
-            </div>
+          <div class="examples-grid">
+            <article class="example-card">
+              <img
+                src="./assets/resonance-example.png"
+                alt="Rendered resonance structures with electron movement arrows"
+              />
+              <div>
+                <h3>Resonance arrows</h3>
+                <p>Follow electron movement and charge placement without reading a wall of text.</p>
+              </div>
+            </article>
+            <article class="example-card">
+              <img
+                src="./assets/sterio-cis-and-trans-example.png"
+                alt="Rendered stereochemistry comparison showing cis and trans relationships"
+              />
+              <div>
+                <h3>Stereochemistry</h3>
+                <p>Keep cis/trans and wedge/dash relationships visible while studying.</p>
+              </div>
+            </article>
+            <article class="example-card">
+              <img
+                src="./assets/functional-groups-example.png"
+                alt="Rendered functional group review cards"
+              />
+              <div>
+                <h3>Functional groups</h3>
+                <p>Turn AI explanations into reviewable cards for recognizing the chemistry that matters.</p>
+              </div>
+            </article>
+            <article class="example-card">
+              <img
+                src="./assets/line-structure-exaples.png"
+                alt="Clean rendered line-structure examples in ChemRender"
+              />
+              <div>
+                <h3>Clean line structures</h3>
+                <p>Make structures readable enough to screenshot, export, or put in notes.</p>
+              </div>
+            </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="desktop" class="section desktop-section">
-          <div class="desktop-panel">
-            <div>
-              <p class="eyebrow">Desktop app</p>
-              <h2>Clipboard import works best in the installed app.</h2>
-              <p>
-                The browser version is useful for previewing the UI, but OS clipboard reads are
-                permission-gated. The signed macOS installer gives the intended `i` and `p`
-                workflow with immediate clipboard access.
-              </p>
-            </div>
-            <div class="desktop-calls">
-              <div>
-                <strong>`i`</strong>
-                <span>Import clipboard text immediately</span>
-              </div>
-              <div>
-                <strong>`p`</strong>
-                <span>Replace the selected card from clipboard immediately</span>
-              </div>
-              <div>
-                <strong>Custom keys</strong>
-                <span>Choose Vim, Simple, Off, or your own bindings</span>
-              </div>
-            </div>
+      <section id="keybinds" class="section keybinds-section">
+        <div class="section-inner keybinds-layout">
+          <div>
+            <p class="eyebrow">Speed</p>
+            <h2>Designed to disappear while you study.</h2>
+            <p>
+              ChemRender should not become another thing to manage. Copy the prompt, ask the AI,
+              paste the response, and keep going. Keyboard shortcuts make import, replace,
+              navigation, and export quick. Flexible keybinds let students use simple controls,
+              Vim-style controls, or their own setup.
+            </p>
+            <ul class="feature-list">
+              <li>One-button import and paste workflow</li>
+              <li>Fast replace flow for fixing one card</li>
+              <li>Keyboard navigation between rendered examples</li>
+              <li>Flexible keybind presets and custom controls</li>
+            </ul>
           </div>
-        </section>
-      </main>
+          <img
+            src="./assets/key-binds-example.png"
+            alt="ChemRender keybind settings showing flexible keyboard controls"
+          />
+        </div>
+      </section>
 
-      <footer class="site-footer">
-        <p>ChemRender is built for chemistry note workflows, not molecule editing.</p>
-        <a href="#top">Back to top</a>
-      </footer>
-    </div>
+      <section id="download" class="section download-section">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Download</p>
+            <h2>Install ChemRender for fast clipboard import.</h2>
+          </div>
+          <div class="download-grid">
+            <article class="download-card">
+              <h3>Mac installer</h3>
+              <p>Use ChemRender with the fast desktop clipboard workflow on macOS.</p>
+              <a class="button button-secondary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
+                Download for Mac
+              </a>
+              <span>Signed and notarized for macOS.</span>
+            </article>
+            <article class="download-card">
+              <h3>Windows installer</h3>
+              <p>Use ChemRender with the same prompt, paste, and study flow on Windows.</p>
+              <button class="button button-secondary" type="button" disabled>
+                Download for Windows
+              </button>
+              <span>Installer coming soon.</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="tutorials" class="section tutorial-section">
+        <div class="section-inner narrow">
+          <h2>Tutorials coming soon.</h2>
+          <p>A short walkthrough for using ChemRender with your preferred LLM will live here.</p>
+        </div>
+      </section>
+
+      <section id="try" class="section final-cta">
+        <div class="section-inner cta-panel">
+          <img src="./assets/icon.png" alt="" width="72" height="72" />
+          <div>
+            <h2>Give your AI tutor a chemistry renderer.</h2>
+            <p>
+              Use your preferred LLM for explanations, then let ChemRender handle the visual study
+              cards.
+            </p>
+            <div class="actions">
+              <button class="button button-primary js-copy-prompt" type="button">Copy Prompt</button>
+              <a class="button button-secondary" href="#download">Try ChemRender</a>
+            </div>
+            <p class="copy-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="manual-copy" hidden>
+        <div class="manual-copy-panel">
+          <button class="manual-close" type="button" aria-label="Close manual copy fallback">Close</button>
+          <h2>Copy manually</h2>
+          <p>Your browser blocked clipboard access. Select the prompt below and paste it into your LLM.</p>
+          <textarea class="manual-prompt" readonly></textarea>
+          <button class="button button-secondary js-select-prompt" type="button">Select all</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ChemRender is built for fast organic chemistry study workflows.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script>
+      const chemRenderPrompt = `You are helping me study organic chemistry. Explain using ChemRender-compatible output so I can paste your answer into my renderer.
+
+When you show molecules or reactions, provide clean renderable cards with short student-facing captions. Include lone pairs and formal charges when they matter. Use separate cards for resonance structures, stereochemistry comparisons, mechanisms, acid/base examples, or functional group review.
+
+Use valid molecular representations internally for the renderer. Keep the chemistry accurate. Do not use ASCII-art molecule drawings. Do not make the explanation a wall of text. Make each card focus on one thing I should notice.
+
+For resonance or mechanisms, show each important structure as its own card and include electron-movement arrows when useful. For stereochemistry, preserve wedge/dash or cis/trans relationships when relevant. For functional groups, make the important groups easy to identify.`;
+
+      const manualCopy = document.querySelector(".manual-copy");
+      const manualPrompt = document.querySelector(".manual-prompt");
+      const statuses = document.querySelectorAll(".copy-status");
+
+      function setStatus(message) {
+        statuses.forEach((status) => {
+          status.textContent = message;
+        });
+      }
+
+      function showManualCopy() {
+        manualPrompt.value = chemRenderPrompt;
+        manualCopy.hidden = false;
+        manualPrompt.focus();
+        manualPrompt.select();
+      }
+
+      async function copyPrompt() {
+        try {
+          await navigator.clipboard.writeText(chemRenderPrompt);
+          setStatus("Prompt copied. Paste it into your LLM.");
+          manualCopy.hidden = true;
+        } catch (error) {
+          setStatus("Clipboard copy was blocked. Use the manual copy box below.");
+          showManualCopy();
+        }
+      }
+
+      document.querySelectorAll(".js-copy-prompt").forEach((button) => {
+        button.addEventListener("click", copyPrompt);
+      });
+
+      document.querySelector(".js-select-prompt").addEventListener("click", () => {
+        manualPrompt.focus();
+        manualPrompt.select();
+      });
+
+      document.querySelector(".manual-close").addEventListener("click", () => {
+        manualCopy.hidden = true;
+      });
+    </script>
   </body>
 </html>
