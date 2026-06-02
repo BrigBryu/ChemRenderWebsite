@@ -23,7 +23,7 @@
   <body>
     <div class="beta-banner">
       <p>ChemRender is in <strong>free beta</strong> — your feedback shapes it.</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener">Send feedback →</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback →</a>
     </div>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="ChemRender home">
@@ -50,13 +50,13 @@
             review. Bring your own AI tutor — ChatGPT, Claude, Gemini, or a local model.
           </p>
           <div class="actions">
-            <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
+            <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download data-gc-event="download-mac">
               Download for macOS
             </a>
-            <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download>
+            <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download data-gc-event="download-windows">
               Download for Windows
             </a>
-            <a class="button button-secondary" href="./tutorials/getting-started.html">View quickstart</a>
+            <a class="button button-secondary" href="./tutorials/getting-started.html" data-gc-event="quickstart">View quickstart</a>
           </div>
           <p class="trust-line">
             Free during beta. No account required. Bring your own AI model. macOS build is signed
@@ -227,7 +227,7 @@
             <li>Beta testers keep their build and get a discount on future paid versions.</li>
           </ul>
           <div class="actions">
-            <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener">Send feedback</a>
+            <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback</a>
             <a class="button button-secondary" href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20feedback">Or email me</a>
           </div>
           <p class="trust-line">
@@ -279,7 +279,7 @@
             <article class="download-card">
               <h3>macOS</h3>
               <p>Render AI ochem answers into study cards on your Mac.</p>
-              <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
+              <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download data-gc-event="download-mac">
                 Download for macOS
               </a>
               <span>Signed and notarized for macOS.</span>
@@ -287,7 +287,7 @@
             <article class="download-card">
               <h3>Windows</h3>
               <p>The same import, render, and study flow on Windows.</p>
-              <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download>
+              <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download data-gc-event="download-windows">
                 Download for Windows
               </a>
               <span>x64 .zip. Windows may warn "unknown publisher" — click More info → Run anyway.</span>
@@ -301,12 +301,13 @@
     <footer class="site-footer">
       <p>Built by a pre-med student for surviving organic chemistry. Free during beta.</p>
       <p class="footer-links">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener">Send feedback</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback</a>
         <span aria-hidden="true">·</span>
         <a href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20feedback">Email me</a>
         <span aria-hidden="true">·</span>
         <a href="#top">Back to top</a>
       </p>
     </footer>
+    <script src="./analytics.js" defer></script>
   </body>
 </html>
