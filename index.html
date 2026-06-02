@@ -207,9 +207,110 @@
       </section>
 
       <section id="tutorials" class="section tutorial-section">
-        <div class="section-inner narrow">
-          <h2>Tutorials coming soon.</h2>
-          <p>A short walkthrough for using ChemRender with your preferred LLM will live here.</p>
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Tutorials</p>
+              <h2>How to use ChemRender.</h2>
+            </div>
+          </div>
+          <p class="tutorial-note">
+            These are text walkthroughs for now. Illustrated tutorials with screenshots are coming
+            later.
+          </p>
+
+          <div class="tutorial-list">
+            <article class="tutorial-card">
+              <h3>1. Set up and prompt your LLM</h3>
+              <ol>
+                <li>Install ChemRender from the <a href="#download">download section</a>.</li>
+                <li>Press the <strong>Copy Prompt</strong> button on this page to copy the ChemRender prompt.</li>
+                <li>
+                  Paste that prompt into your preferred LLM (ChatGPT, Claude, etc.), then ask your
+                  organic chemistry question as usual.
+                </li>
+                <li>
+                  The LLM will answer with one or more molecule cards in the ChemRender format
+                  (blocks that start with <code>::mol</code>).
+                </li>
+              </ol>
+            </article>
+
+            <article class="tutorial-card">
+              <h3>2. Import cards from the clipboard</h3>
+              <ol>
+                <li>Copy the LLM's reply (the text containing the <code>::mol</code> blocks).</li>
+                <li>
+                  In the ChemRender desktop app, press <kbd>i</kbd> to import the cards straight from
+                  your clipboard — no paste dialog.
+                </li>
+                <li>Each <code>::mol</code> block renders as its own molecule card with lone pairs, charges, arrows, and captions.</li>
+              </ol>
+              <p class="tutorial-hint">
+                The keyboard clipboard shortcuts work in the installed desktop app. In a browser,
+                clipboard access is permission-gated, so the desktop app is recommended.
+              </p>
+            </article>
+
+            <article class="tutorial-card">
+              <h3>3. Replace a single card</h3>
+              <ol>
+                <li>Select the card you want to update.</li>
+                <li>Copy one valid molecule-card block to your clipboard.</li>
+                <li>Press <kbd>p</kbd> to replace just the selected card with the clipboard content.</li>
+              </ol>
+            </article>
+
+            <article class="tutorial-card">
+              <h3>4. Understand the card format</h3>
+              <p>
+                Each card is a small text block. Atom references use element order across the card —
+                <code>O1</code> is the first oxygen, <code>C2</code> the second carbon, and so on.
+              </p>
+              <pre><code>::mol
+title: Starting structure
+smiles: O=C1[C-]CCCC1
+lonepairs:
+  O1: 2
+  C2: 1
+charges:
+  C2: -
+caption: One sentence about what to notice.</code></pre>
+              <ul>
+                <li><code>title</code> — the card heading.</li>
+                <li><code>smiles</code> — the molecule (standard SMILES).</li>
+                <li><code>lonepairs</code> / <code>charges</code> — manual annotations by atom reference.</li>
+                <li><code>caption</code> — a short, student-facing explanation.</li>
+              </ul>
+            </article>
+
+            <article class="tutorial-card">
+              <h3>5. Add curved arrows</h3>
+              <p>Add an <code>arrows</code> section to show electron movement. Endpoints reference atoms, lone pairs, or bonds.</p>
+              <pre><code>arrows:
+  O1.lp1 -> N1-H1 curve: left
+  N1-H1 -> N1 curve: right</code></pre>
+              <ul>
+                <li><code>O1.lp1</code> — the first lone pair drawn on <code>O1</code>.</li>
+                <li><code>O1</code> — the atom <code>O1</code>.</li>
+                <li><code>C1-O1</code> — the bond between <code>C1</code> and <code>O1</code>.</li>
+                <li><code>curve: left</code> / <code>curve: right</code> — optional bend direction.</li>
+              </ul>
+            </article>
+
+            <article class="tutorial-card">
+              <h3>6. Export a card as an image</h3>
+              <ol>
+                <li>Open <strong>Profile</strong> and enable <strong>Show SVG/PNG export buttons</strong>.</li>
+                <li>Use the per-card <strong>SVG</strong> button for a clean vector download.</li>
+                <li>Use the per-card <strong>PNG</strong> button for a high-resolution image.</li>
+              </ol>
+              <p class="tutorial-hint">
+                Exports include the molecule drawing and its annotations on an off-white background.
+                They do not include the app UI, title, or caption.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
