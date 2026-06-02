@@ -7,7 +7,7 @@
 //
 // Point the text-to-chem app at the SAME code (VITE_GOATCOUNTER_ENDPOINT in
 // its .env.local) so the app and website report into one dashboard.
-const GOATCOUNTER_CODE = "YOURCODE";
+const GOATCOUNTER_CODE = "bridgerb";
 
 (function () {
   if (GOATCOUNTER_CODE === "YOURCODE") {
