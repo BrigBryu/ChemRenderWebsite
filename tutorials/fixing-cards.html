@@ -51,20 +51,26 @@
       </section>
 
       <section class="doc-section">
-        <h2 class="doc-h2">The quickest fix</h2>
+        <h2 class="doc-h2">The quickest fix: copy the error prompt to your AI</h2>
         <p>
-          Ask your AI model to regenerate the answer using the built-in ChemRender prompt. Copy the
-          prompt from inside the app, paste it back into the AI, and ask it to redo the response in
-          ChemRender molecule-card format. This resolves most formatting problems in one step.
+          When a card does not render, use the <strong>copy error prompt</strong> button in the app.
+          It builds a prompt that includes the error and what went wrong. Send that to your AI tutor
+          first — not to me — and ask it to fix the answer in ChemRender molecule-card format. The AI
+          usually corrects the SMILES, marker, or formatting in one step.
         </p>
       </section>
 
       <section class="doc-section">
         <h2 class="doc-h2">If it still does not render</h2>
         <ul class="doc-list">
-          <li>Ask the AI to use valid SMILES and double-check the structure.</li>
+          <li>Paste the error prompt back to the AI again and ask it to use valid SMILES and double-check the structure.</li>
           <li>Ask it to keep one molecule per card and re-include the <code>::mol</code> marker.</li>
           <li>Ask it to add a short title and caption to each card.</li>
+          <li>
+            Still stuck after trying the AI? Then
+            <a href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20broken%20card">email me</a>
+            a screenshot of the broken card so I can fix the renderer.
+          </li>
         </ul>
       </section>
 
