@@ -608,10 +608,220 @@ kbd {
   gap: 10px;
 }
 
+.trust-line {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.preview-section {
+  padding-top: 72px;
+}
+
+.preview-figure {
+  width: var(--content);
+  margin: 0 auto;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.preview-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.preview-figure figcaption {
+  margin: 14px 4px 6px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.steps-grid .step-card {
+  min-height: auto;
+}
+
+.capability-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.capability-list li {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: #263831;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.free-section .section-inner {
+  padding: 32px;
+  border-left: 5px solid var(--accent);
+  background: var(--surface-warm);
+}
+
+.free-section h2 {
+  max-width: 22ch;
+}
+
+.free-section p {
+  max-width: 70ch;
+  margin: 18px 0 0;
+  color: #394a43;
+  font-size: 1.08rem;
+}
+
+.free-list {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding-left: 22px;
+  color: #394a43;
+}
+
+.free-list li {
+  line-height: 1.5;
+}
+
+a.tutorial-card {
+  display: block;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.tutorial-card:hover,
+a.tutorial-card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.tutorial-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+/* Tutorial article pages */
+.doc {
+  width: min(760px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 40px 0 24px;
+}
+
+.doc-back {
+  margin: 0 0 22px;
+}
+
+.doc-back a {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.doc-back a:hover,
+.doc-back a:focus-visible {
+  color: var(--accent-dark);
+}
+
+.doc-title {
+  max-width: none;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.04;
+}
+
+.doc .lede {
+  margin-top: 16px;
+}
+
+.doc-section {
+  margin-top: 38px;
+}
+
+.doc-h2 {
+  max-width: none;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+}
+
+.doc p {
+  max-width: 68ch;
+  color: #35463f;
+}
+
+.doc a {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+.doc a:hover,
+.doc a:focus-visible {
+  text-decoration: underline;
+}
+
+.doc-steps,
+.doc-list,
+.doc-examples,
+.doc-links {
+  max-width: 68ch;
+  color: #35463f;
+  line-height: 1.6;
+}
+
+.doc-steps {
+  padding-left: 22px;
+}
+
+.doc-steps li {
+  margin: 14px 0;
+}
+
+.doc-list li,
+.doc-examples li,
+.doc-links li {
+  margin: 8px 0;
+}
+
+.doc code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--surface-warm);
+  font-size: 0.9em;
+}
+
+.doc-next {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
 @media (max-width: 1040px) {
   .hero,
   .keybinds-layout {
     grid-template-columns: 1fr;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tutorial-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   h1 {
@@ -656,6 +866,7 @@ kbd {
   }
 
   .workflow-grid,
+  .steps-grid,
   .examples-grid,
   .download-grid,
   .cta-panel {
@@ -667,6 +878,7 @@ kbd {
   }
 
   .pain-section .section-inner,
+  .free-section .section-inner,
   .cta-panel {
     padding: 22px;
   }

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ChemRender turns AI organic chemistry help into clean rendered chemistry cards for studying."
+      content="ChemRender is a free desktop app for macOS and Windows that turns AI organic chemistry answers into clean, readable molecule study cards. Bring your own AI model."
     />
-    <title>ChemRender</title>
+    <title>ChemRender — Free desktop app for readable AI ochem cards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,33 +23,37 @@
         <span>ChemRender</span>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#workflow">Workflow</a>
-        <a href="#examples">Examples</a>
-        <a href="#keybinds">Keybinds</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#free">Free</a>
         <a href="#download">Download</a>
         <a href="#tutorials">Tutorials</a>
-        <a href="#try">Try</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">AI ochem help in, readable cards out</p>
-          <h1>Make AI organic chemistry explanations readable.</h1>
+          <p class="eyebrow">Free desktop app · macOS &amp; Windows</p>
+          <h1>Turn AI organic chemistry answers into readable study cards.</h1>
           <p class="lede">
-            LLMs are great ochem tutors, but their chemistry drawings are often hard to study
-            from. ChemRender lets you press Copy Prompt, ask any LLM, paste the answer back in,
-            and get clean rendered chemistry cards.
+            ChemRender is a free desktop app for macOS and Windows that renders AI-generated ochem
+            explanations into clean molecule cards with structures, lone pairs, formal charges,
+            resonance forms, stereochemistry examples, and captions. Bring your own AI tutor —
+            ChatGPT, Claude, Gemini, or a local model.
           </p>
           <div class="actions">
-            <button class="button button-primary js-copy-prompt" type="button">Copy Prompt</button>
-            <a class="button button-secondary" href="#examples">See Examples</a>
+            <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
+              Download for macOS
+            </a>
+            <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download>
+              Download for Windows
+            </a>
+            <a class="button button-secondary" href="./tutorials/getting-started.html">View quickstart</a>
           </div>
-          <p class="supporting-line">
-            Built for fast studying: one-button import, keyboard shortcuts, and flexible keybinds.
+          <p class="trust-line">
+            Free. No account required. Bring your own AI model. macOS build is signed and notarized.
           </p>
-          <p class="copy-status" role="status" aria-live="polite"></p>
         </div>
         <div class="hero-visual">
           <img
@@ -59,64 +63,79 @@
         </div>
       </section>
 
-      <section class="section pain-section">
-        <div class="section-inner narrow">
-          <p class="eyebrow">The study problem</p>
-          <h2>AI can explain ochem. It just cannot draw it well.</h2>
-          <p>
-            ChatGPT, Claude, and other LLMs are patient and useful for walking through mechanisms,
-            resonance, acid/base logic, and stereochemistry. The problem is that their chemistry
-            representations often turn into ambiguous text, broken diagrams, or explanations that
-            are hard to review later. ChemRender fixes the visual layer.
-          </p>
-        </div>
+      <section class="section preview-section">
+        <figure class="preview-figure">
+          <img
+            src="./assets/functional-groups-example.png"
+            alt="Rendered molecule cards in ChemRender showing functional groups with captions"
+          />
+          <figcaption>
+            Paste a ChemRender-formatted AI answer into the app and study clean rendered cards.
+          </figcaption>
+        </figure>
       </section>
 
-      <section id="workflow" class="section">
+      <section id="how" class="section">
         <div class="section-inner">
           <div class="section-head">
-            <p class="eyebrow">Workflow</p>
-            <h2>Copy prompt. Ask any LLM. Paste back clean chemistry.</h2>
+            <div>
+              <p class="eyebrow">How it works</p>
+              <h2>From an AI answer to study cards in five steps.</h2>
+            </div>
           </div>
-          <div class="workflow-grid">
+          <div class="steps-grid">
             <article class="step-card">
               <span>1</span>
-              <h3>Copy the ChemRender prompt</h3>
-              <p>Press one button to copy the instruction prompt that tells your LLM how to answer for ChemRender.</p>
+              <h3>Download ChemRender</h3>
+              <p>Install the free app for macOS or Windows.</p>
             </article>
             <article class="step-card">
               <span>2</span>
-              <h3>Ask your ochem question</h3>
-              <p>Resonance, mechanisms, stereochemistry, formal charges, functional groups, or whatever you are studying.</p>
+              <h3>Copy the built-in prompt</h3>
+              <p>Open the app and copy the built-in ChemRender prompt — no formatting to memorize.</p>
             </article>
             <article class="step-card">
               <span>3</span>
-              <h3>Paste the answer back</h3>
-              <p>Import the response with a button or keybind and keep moving.</p>
+              <h3>Ask your AI tutor</h3>
+              <p>Ask ChatGPT, Claude, Gemini, or another AI an organic chemistry question.</p>
             </article>
             <article class="step-card">
               <span>4</span>
-              <h3>Study readable cards</h3>
-              <p>Review structures, captions, lone pairs, charges, arrows, and stereochemistry without decoding text diagrams.</p>
+              <h3>Paste the response</h3>
+              <p>Paste the AI's answer back into ChemRender.</p>
+            </article>
+            <article class="step-card">
+              <span>5</span>
+              <h3>Study the cards</h3>
+              <p>Review the rendered molecule cards with structures, charges, and captions.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="examples" class="section examples-section">
+      <section id="features" class="section examples-section">
         <div class="section-inner">
           <div class="section-head">
-            <p class="eyebrow">Examples</p>
-            <h2>Readable chemistry cards for the topics students actually review.</h2>
+            <div>
+              <p class="eyebrow">What it does well</p>
+              <h2>Readable chemistry cards for the topics students actually review.</h2>
+            </div>
           </div>
+          <ul class="capability-list">
+            <li>Resonance forms</li>
+            <li>Lone pairs and formal charges</li>
+            <li>Functional groups</li>
+            <li>Stereochemistry</li>
+            <li>Line-structure practice</li>
+          </ul>
           <div class="examples-grid">
             <article class="example-card">
               <img
                 src="./assets/resonance-example.png"
-                alt="Rendered resonance structures with electron movement arrows"
+                alt="Rendered resonance structures with electron movement arrows, lone pairs, and formal charges"
               />
               <div>
-                <h3>Resonance arrows</h3>
+                <h3>Resonance, lone pairs &amp; charges</h3>
                 <p>Follow electron movement and charge placement without reading a wall of text.</p>
               </div>
             </article>
@@ -157,18 +176,18 @@
       <section id="keybinds" class="section keybinds-section">
         <div class="section-inner keybinds-layout">
           <div>
-            <p class="eyebrow">Speed</p>
+            <p class="eyebrow">Built for studying</p>
             <h2>Designed to disappear while you study.</h2>
             <p>
-              ChemRender should not become another thing to manage. Copy the prompt, ask the AI,
-              paste the response, and keep going. Keyboard shortcuts make import, replace,
-              navigation, and export quick. Flexible keybinds let students use simple controls,
-              Vim-style controls, or their own setup.
+              ChemRender should not become another thing to manage. Import an answer, study the
+              cards, and keep going. Keyboard shortcuts make import, replace, navigation, and
+              export quick. Flexible keybinds let students use simple controls, Vim-style controls,
+              or their own setup.
             </p>
             <ul class="feature-list">
               <li>One-button import and paste workflow</li>
               <li>Fast replace flow for fixing one card</li>
-              <li>Keyboard navigation between rendered examples</li>
+              <li>Keyboard navigation between rendered cards</li>
               <li>Flexible keybind presets and custom controls</li>
             </ul>
           </div>
@@ -179,30 +198,22 @@
         </div>
       </section>
 
-      <section id="download" class="section download-section">
-        <div class="section-inner">
-          <div class="section-head">
-            <p class="eyebrow">Download</p>
-            <h2>Install ChemRender for fast clipboard import.</h2>
-          </div>
-          <div class="download-grid">
-            <article class="download-card">
-              <h3>Mac installer</h3>
-              <p>Use ChemRender with the fast desktop clipboard workflow on macOS.</p>
-              <a class="button button-secondary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
-                Download for Mac
-              </a>
-              <span>Signed and notarized for macOS.</span>
-            </article>
-            <article class="download-card">
-              <h3>Windows installer</h3>
-              <p>Use ChemRender with the same prompt, paste, and study flow on Windows.</p>
-              <a class="button button-secondary" href="./assets/downloads/Chem-Render-windows-x64.zip" download>
-                Download for Windows
-              </a>
-              <span>NSIS installer (x64), packaged as a .zip.</span>
-            </article>
-          </div>
+      <section id="free" class="section free-section">
+        <div class="section-inner narrow">
+          <p class="eyebrow">Free · bring your own AI</p>
+          <h2>ChemRender is free and works with the AI you already use.</h2>
+          <p>
+            ChemRender does not try to be another AI subscription. It is a free renderer for the AI
+            tools you already use. Bring ChatGPT, Claude, Gemini, or a local model — ChemRender just
+            turns the answer into readable organic chemistry cards.
+          </p>
+          <ul class="free-list">
+            <li>ChemRender is free.</li>
+            <li>It does not include or sell an AI model.</li>
+            <li>Use the AI tutor you already have.</li>
+            <li>No extra subscription is required by ChemRender.</li>
+            <li>The app is just the renderer that makes ochem explanations readable.</li>
+          </ul>
         </div>
       </section>
 
@@ -210,197 +221,70 @@
         <div class="section-inner">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Tutorials</p>
-              <h2>How to use ChemRender.</h2>
+              <p class="eyebrow">Tutorials &amp; help</p>
+              <h2>Short guides to get you rendering fast.</h2>
             </div>
           </div>
           <p class="tutorial-note">
-            These are text walkthroughs for now. Illustrated tutorials with screenshots are coming
-            later.
+            Text-first guides you can use today. Screenshots will be added later.
           </p>
-
-          <div class="tutorial-list">
-            <article class="tutorial-card">
-              <h3>1. Set up and prompt your LLM</h3>
-              <ol>
-                <li>Install ChemRender from the <a href="#download">download section</a>.</li>
-                <li>Press the <strong>Copy Prompt</strong> button on this page to copy the ChemRender prompt.</li>
-                <li>
-                  Paste that prompt into your preferred LLM (ChatGPT, Claude, etc.), then ask your
-                  organic chemistry question as usual.
-                </li>
-                <li>
-                  The LLM will answer with one or more molecule cards in the ChemRender format
-                  (blocks that start with <code>::mol</code>).
-                </li>
-              </ol>
-            </article>
-
-            <article class="tutorial-card">
-              <h3>2. Import cards from the clipboard</h3>
-              <ol>
-                <li>Copy the LLM's reply (the text containing the <code>::mol</code> blocks).</li>
-                <li>
-                  In the ChemRender desktop app, press <kbd>i</kbd> to import the cards straight from
-                  your clipboard — no paste dialog.
-                </li>
-                <li>Each <code>::mol</code> block renders as its own molecule card with lone pairs, charges, arrows, and captions.</li>
-              </ol>
-              <p class="tutorial-hint">
-                The keyboard clipboard shortcuts work in the installed desktop app. In a browser,
-                clipboard access is permission-gated, so the desktop app is recommended.
-              </p>
-            </article>
-
-            <article class="tutorial-card">
-              <h3>3. Replace a single card</h3>
-              <ol>
-                <li>Select the card you want to update.</li>
-                <li>Copy one valid molecule-card block to your clipboard.</li>
-                <li>Press <kbd>p</kbd> to replace just the selected card with the clipboard content.</li>
-              </ol>
-            </article>
-
-            <article class="tutorial-card">
-              <h3>4. Understand the card format</h3>
+          <div class="tutorial-list tutorial-list-2">
+            <a class="tutorial-card" href="./tutorials/getting-started.html">
+              <h3>How to use ChemRender</h3>
               <p>
-                Each card is a small text block. Atom references use element order across the card —
-                <code>O1</code> is the first oxygen, <code>C2</code> the second carbon, and so on.
+                Copy the built-in prompt, ask any AI, paste the answer back, and study the cards.
+                Open a card's details to see functional groups, and add the arrows prompt to see
+                resonance forms.
               </p>
-              <pre><code>::mol
-title: Starting structure
-smiles: O=C1[C-]CCCC1
-lonepairs:
-  O1: 2
-  C2: 1
-charges:
-  C2: -
-caption: One sentence about what to notice.</code></pre>
-              <ul>
-                <li><code>title</code> — the card heading.</li>
-                <li><code>smiles</code> — the molecule (standard SMILES).</li>
-                <li><code>lonepairs</code> / <code>charges</code> — manual annotations by atom reference.</li>
-                <li><code>caption</code> — a short, student-facing explanation.</li>
-              </ul>
-            </article>
-
-            <article class="tutorial-card">
-              <h3>5. Add curved arrows</h3>
-              <p>Add an <code>arrows</code> section to show electron movement. Endpoints reference atoms, lone pairs, or bonds.</p>
-              <pre><code>arrows:
-  O1.lp1 -> N1-H1 curve: left
-  N1-H1 -> N1 curve: right</code></pre>
-              <ul>
-                <li><code>O1.lp1</code> — the first lone pair drawn on <code>O1</code>.</li>
-                <li><code>O1</code> — the atom <code>O1</code>.</li>
-                <li><code>C1-O1</code> — the bond between <code>C1</code> and <code>O1</code>.</li>
-                <li><code>curve: left</code> / <code>curve: right</code> — optional bend direction.</li>
-              </ul>
-            </article>
-
-            <article class="tutorial-card">
-              <h3>6. Export a card as an image</h3>
-              <ol>
-                <li>Open <strong>Profile</strong> and enable <strong>Show SVG/PNG export buttons</strong>.</li>
-                <li>Use the per-card <strong>SVG</strong> button for a clean vector download.</li>
-                <li>Use the per-card <strong>PNG</strong> button for a high-resolution image.</li>
-              </ol>
-              <p class="tutorial-hint">
-                Exports include the molecule drawing and its annotations on an off-white background.
-                They do not include the app UI, title, or caption.
-              </p>
-            </article>
+              <span class="tutorial-link">Read the guide →</span>
+            </a>
+            <a class="tutorial-card" href="./tutorials/fixing-cards.html">
+              <h3>Fixing cards that do not render</h3>
+              <p>Quick fixes for invalid SMILES, missing markers, and broken formatting.</p>
+              <span class="tutorial-link">Read the guide →</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="try" class="section final-cta">
-        <div class="section-inner cta-panel">
-          <img src="./assets/icon.png" alt="" width="72" height="72" />
-          <div>
-            <h2>Give your AI tutor a chemistry renderer.</h2>
-            <p>
-              Use your preferred LLM for explanations, then let ChemRender handle the visual study
-              cards.
-            </p>
-            <div class="actions">
-              <button class="button button-primary js-copy-prompt" type="button">Copy Prompt</button>
-              <a class="button button-secondary" href="#download">Try ChemRender</a>
+      <section id="download" class="section download-section">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Download</p>
+              <h2>Install ChemRender — free, for macOS and Windows.</h2>
             </div>
-            <p class="copy-status" role="status" aria-live="polite"></p>
           </div>
-        </div>
-      </section>
-
-      <section class="manual-copy" hidden>
-        <div class="manual-copy-panel">
-          <button class="manual-close" type="button" aria-label="Close manual copy fallback">Close</button>
-          <h2>Copy manually</h2>
-          <p>Your browser blocked clipboard access. Select the prompt below and paste it into your LLM.</p>
-          <textarea class="manual-prompt" readonly></textarea>
-          <button class="button button-secondary js-select-prompt" type="button">Select all</button>
+          <div class="download-grid">
+            <article class="download-card">
+              <h3>macOS</h3>
+              <p>Render AI ochem answers into study cards on your Mac.</p>
+              <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download>
+                Download for macOS
+              </a>
+              <span>Signed and notarized for macOS.</span>
+            </article>
+            <article class="download-card">
+              <h3>Windows</h3>
+              <p>The same import, render, and study flow on Windows.</p>
+              <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download>
+                Download for Windows
+              </a>
+              <span>NSIS installer (x64), packaged as a .zip.</span>
+            </article>
+          </div>
+          <p class="trust-line">Free. No account required. Bring your own AI model.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>ChemRender is built for fast organic chemistry study workflows.</p>
+      <p>ChemRender is a free organic chemistry study renderer. Bring your own AI model.</p>
       <p class="footer-links">
         <a href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20issue">Report an issue or contact me</a>
         <span aria-hidden="true">·</span>
         <a href="#top">Back to top</a>
       </p>
     </footer>
-
-    <script>
-      const chemRenderPrompt = `You are helping me study organic chemistry. Explain using ChemRender-compatible output so I can paste your answer into my renderer.
-
-When you show molecules or reactions, provide clean renderable cards with short student-facing captions. Include lone pairs and formal charges when they matter. Use separate cards for resonance structures, stereochemistry comparisons, mechanisms, acid/base examples, or functional group review.
-
-Use valid molecular representations internally for the renderer. Keep the chemistry accurate. Do not use ASCII-art molecule drawings. Do not make the explanation a wall of text. Make each card focus on one thing I should notice.
-
-For resonance or mechanisms, show each important structure as its own card and include electron-movement arrows when useful. For stereochemistry, preserve wedge/dash or cis/trans relationships when relevant. For functional groups, make the important groups easy to identify.`;
-
-      const manualCopy = document.querySelector(".manual-copy");
-      const manualPrompt = document.querySelector(".manual-prompt");
-      const statuses = document.querySelectorAll(".copy-status");
-
-      function setStatus(message) {
-        statuses.forEach((status) => {
-          status.textContent = message;
-        });
-      }
-
-      function showManualCopy() {
-        manualPrompt.value = chemRenderPrompt;
-        manualCopy.hidden = false;
-        manualPrompt.focus();
-        manualPrompt.select();
-      }
-
-      async function copyPrompt() {
-        try {
-          await navigator.clipboard.writeText(chemRenderPrompt);
-          setStatus("Prompt copied. Paste it into your LLM.");
-          manualCopy.hidden = true;
-        } catch (error) {
-          setStatus("Clipboard copy was blocked. Use the manual copy box below.");
-          showManualCopy();
-        }
-      }
-
-      document.querySelectorAll(".js-copy-prompt").forEach((button) => {
-        button.addEventListener("click", copyPrompt);
-      });
-
-      document.querySelector(".js-select-prompt").addEventListener("click", () => {
-        manualPrompt.focus();
-        manualPrompt.select();
-      });
-
-      document.querySelector(".manual-close").addEventListener("click", () => {
-        manualCopy.hidden = true;
-      });
-    </script>
   </body>
 </html>

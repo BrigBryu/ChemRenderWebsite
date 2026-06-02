@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Fixing ChemRender cards that do not render: common issues like invalid SMILES, missing markers, and broken formatting, and how to fix them."
+    />
+    <title>Fixing cards that do not render · ChemRender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="ChemRender home">
+        <img src="../assets/logo.png" alt="" width="42" height="31" />
+        <span>ChemRender</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#how">How it works</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#download">Download</a>
+        <a href="../index.html#tutorials">Tutorials</a>
+      </nav>
+    </header>
+
+    <main id="top" class="doc">
+      <p class="doc-back"><a href="../index.html#tutorials">← All tutorials</a></p>
+      <p class="eyebrow">Tutorial</p>
+      <h1 class="doc-title">Fixing cards that do not render</h1>
+      <p class="lede">
+        Most render problems come from the AI's formatting, not from ChemRender. Here are the common
+        causes and quick fixes.
+      </p>
+
+      <section class="doc-section">
+        <h2 class="doc-h2">Common issues</h2>
+        <ul class="doc-list">
+          <li><strong>Invalid SMILES.</strong> The molecule string is malformed and cannot be drawn.</li>
+          <li><strong>Missing <code>::mol</code> marker.</strong> Each card must start with the <code>::mol</code> line.</li>
+          <li><strong>Broken indentation.</strong> Sections like lone pairs, charges, and arrows rely on consistent indentation.</li>
+          <li><strong>Missing title or caption.</strong> A card without a title or caption can look empty or incomplete.</li>
+          <li><strong>Impossible chemistry.</strong> Sometimes the AI invents a structure that cannot exist.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-h2">The quickest fix</h2>
+        <p>
+          Ask your AI model to regenerate the answer using the built-in ChemRender prompt. Copy the
+          prompt from inside the app, paste it back into the AI, and ask it to redo the response in
+          ChemRender molecule-card format. This resolves most formatting problems in one step.
+        </p>
+      </section>
+
+      <section class="doc-section">
+        <h2 class="doc-h2">If it still does not render</h2>
+        <ul class="doc-list">
+          <li>Ask the AI to use valid SMILES and double-check the structure.</li>
+          <li>Ask it to keep one molecule per card and re-include the <code>::mol</code> marker.</li>
+          <li>Ask it to add a short title and caption to each card.</li>
+        </ul>
+      </section>
+
+      <section class="doc-section doc-next">
+        <h2 class="doc-h2">Next</h2>
+        <ul class="doc-links">
+          <li><a href="./getting-started.html">How to use ChemRender →</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ChemRender is a free organic chemistry study renderer. Bring your own AI model.</p>
+      <p class="footer-links">
+        <a href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20issue">Report an issue or contact me</a>
+        <span aria-hidden="true">·</span>
+        <a href="../index.html">Home</a>
+      </p>
+    </footer>
+  </body>
+</html>
