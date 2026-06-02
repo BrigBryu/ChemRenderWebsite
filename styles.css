@@ -507,6 +507,12 @@ p {
   font-weight: 700;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 @media (max-width: 1040px) {
   .hero,
   .keybinds-layout {
