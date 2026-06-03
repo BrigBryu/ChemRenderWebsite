@@ -14,7 +14,7 @@ To refresh it after changing the app, run:
 ./update-browser-app.sh
 ```
 
-This rebuilds the bundle in `../text-to-chem` with `VITE_BASE_PATH=/app/` (so it
-works on GitHub Pages as a subdirectory) and copies only the production output
-into `app/`. It refuses to publish if any source maps are found. Then commit the
-updated `app/` folder to deploy.
+This rebuilds the bundle in `../text-to-chem` with `VITE_BASE_PATH=./` (relative
+asset paths, so it works under the `/ChemRenderWebsite/` GitHub Pages subdirectory)
+and copies only the production output into `app/`. It refuses to publish if any
+source maps are found. Then commit the updated `app/` folder to deploy.

@@ -13,9 +13,11 @@
 #   ├── ChemRenderWebsite/   <- this public repo (contains app/ = built bundle)
 #   └── text-to-chem/        <- private app source repo (never committed here)
 #
-# It builds with VITE_BASE_PATH=/app/ so the bundle works on GitHub Pages as a
-# subdirectory (https://<site>/app/). Only the minified dist/ output is copied —
-# no source, no node_modules, no source maps.
+# It builds with VITE_BASE_PATH=./ (RELATIVE asset paths) so the bundle works no
+# matter what subdirectory it is mounted under — e.g. a GitHub Pages project site
+# at https://<user>.github.io/ChemRenderWebsite/app/. (Absolute /app/ paths would
+# 404 there because the real base is /ChemRenderWebsite/.) Only the minified dist/
+# output is copied — no source, no node_modules, no source maps.
 
 set -euo pipefail
 
@@ -38,9 +40,9 @@ if [ ! -f "$SOURCE_REPO/package.json" ]; then
   exit 1
 fi
 
-# 4. Build the browser bundle inside the source repo, hosted under /app/.
+# 4. Build the browser bundle inside the source repo with relative asset paths.
 echo "Building browser bundle in $SOURCE_REPO ..."
-( cd "$SOURCE_REPO" && VITE_BASE_PATH=/app/ npm run build )
+( cd "$SOURCE_REPO" && VITE_BASE_PATH=./ npm run build )
 
 if [ ! -d "$DIST_DIR" ]; then
   echo "error: build did not produce $DIST_DIR" >&2
