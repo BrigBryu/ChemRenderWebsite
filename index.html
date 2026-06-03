@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#282828" />
     <meta
       name="description"
-      content="ChemRender is a desktop app (macOS and Windows) that turns AI organic chemistry answers into readable molecule study cards. Free during beta — bring your own AI model."
+      content="ChemRender is a free study tool for organic chemistry students. Turn AI answers into readable molecule study cards. Desktop app for macOS and Windows, plus a browser version. Bring your own AI tutor."
     />
-    <title>ChemRender — Readable AI ochem study cards (free beta)</title>
+    <title>ChemRender — Free organic chemistry study cards</title>
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
     <link rel="icon" href="./assets/icon.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="./assets/icon.png" />
@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="beta-banner">
-      <p>ChemRender is in <strong>free beta</strong> — your feedback shapes it.</p>
+      <p>ChemRender is a <strong>free study tool</strong> — your feedback shapes it.</p>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback →</a>
     </div>
     <header class="site-header">
@@ -33,7 +33,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="#how">How it works</a>
         <a href="#features">Features</a>
-        <a href="#beta">Beta</a>
+        <a href="#browser">Browser</a>
         <a href="#download">Download</a>
         <a href="#tutorials">Tutorials</a>
       </nav>
@@ -42,12 +42,13 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Free beta · built by a pre-med student</p>
+          <p class="eyebrow">Free study tool · built by a pre-med student</p>
           <h1>Turn AI organic chemistry answers into readable study cards.</h1>
           <p class="lede">
-            ChemRender turns AI-generated ochem explanations into readable molecule study cards, so
-            structures, lone pairs, formal charges, resonance forms, and captions are easier to
-            review. Bring your own AI tutor — ChatGPT, Claude, Gemini, or a local model.
+            ChemRender is a free desktop and browser tool for organic chemistry students. Use
+            ChatGPT, Claude, Gemini, or a local model, then paste the response into ChemRender to
+            study clean molecule cards with structures, lone pairs, formal charges, resonance forms,
+            stereochemistry examples, and captions.
           </p>
           <div class="actions">
             <a class="button button-primary" href="./assets/downloads/Chem-Render-mac-arm64.dmg" download data-gc-event="download-mac">
@@ -56,11 +57,10 @@
             <a class="button button-primary" href="./assets/downloads/Chem-Render-windows-x64.zip" download data-gc-event="download-windows">
               Download for Windows
             </a>
-            <a class="button button-secondary" href="./tutorials/getting-started.html" data-gc-event="quickstart">View quickstart</a>
+            <a class="button button-secondary" href="./app/" data-gc-event="use-in-browser">Use in Browser</a>
           </div>
           <p class="trust-line">
-            Free during beta. No account required. Bring your own AI model. macOS build is signed
-            and notarized.
+            Free study tool. No account required. No AI subscription. Bring your own AI tutor.
           </p>
         </div>
         <div class="hero-visual">
@@ -94,8 +94,8 @@
           <div class="steps-grid">
             <article class="step-card">
               <span>1</span>
-              <h3>Download ChemRender</h3>
-              <p>Install the free app for macOS or Windows.</p>
+              <h3>Get ChemRender</h3>
+              <p>Install the free app for macOS or Windows, or open it in your browser.</p>
             </article>
             <article class="step-card">
               <span>2</span>
@@ -206,33 +206,48 @@
         </div>
       </section>
 
-      <section id="beta" class="section free-section">
+      <section id="browser" class="section browser-section">
         <div class="section-inner narrow">
-          <p class="eyebrow">Free beta · bring your own AI</p>
-          <h2>Free during beta. Built by a pre-med student for surviving ochem.</h2>
+          <p class="eyebrow">Try it in 30 seconds</p>
+          <h2>Use ChemRender in your browser.</h2>
           <p>
-            ChemRender is free during beta while I test it with other students. If it becomes useful
-            enough, future versions may become a small paid app. Beta testers will be able to keep
-            using the beta build they downloaded, and they'll get a discount if they choose to
-            upgrade to newer paid versions later.
+            Want to try it without installing? The browser version lets you paste a
+            ChemRender-formatted AI answer and render molecule cards directly on the site — no
+            download, no account.
           </p>
           <p>
-            It is not another AI subscription. Bring ChatGPT, Claude, Gemini, or a local model —
-            ChemRender just turns the answer into readable organic chemistry cards.
+            Because browsers restrict direct clipboard access, the browser version may need a few
+            extra paste clicks. For the smoothest workflow, use the desktop app.
+          </p>
+          <div class="actions">
+            <a class="button button-primary" href="./app/" data-gc-event="use-in-browser">Use in Browser</a>
+            <a class="button button-secondary" href="#download" data-gc-event="jump-download">Download desktop app</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="free" class="section free-section">
+        <div class="section-inner narrow">
+          <p class="eyebrow">Free · bring your own AI</p>
+          <h2>A free study tool, built by a pre-med student for surviving ochem.</h2>
+          <p>
+            ChemRender is free and works with the AI tools you already use. It is not another AI
+            subscription and does not include an AI model. Bring ChatGPT, Claude, Gemini, or a local
+            model — ChemRender just turns the answer into readable organic chemistry cards.
           </p>
           <ul class="free-list">
-            <li>Free to download and use during the beta.</li>
-            <li>No account required, and no AI model to pay ChemRender for.</li>
-            <li>Beta builds may change or break — the goal is to make it reliable before launch.</li>
-            <li>Beta testers keep their build and get a discount on future paid versions.</li>
+            <li>Free to download and use.</li>
+            <li>No account required.</li>
+            <li>No AI subscription — bring your own AI tutor.</li>
+            <li>Works on macOS, Windows, and in the browser.</li>
           </ul>
           <div class="actions">
             <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback</a>
             <a class="button button-secondary" href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20feedback">Or email me</a>
           </div>
           <p class="trust-line">
-            Most helpful: what you studied, which AI you used, screenshots of broken cards, and
-            whether you'd pay a small amount later.
+            Most helpful: what you studied, which AI you used, and screenshots of any cards that
+            don't render.
           </p>
         </div>
       </section>
@@ -272,7 +287,7 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Download</p>
-              <h2>Install ChemRender — free, for macOS and Windows.</h2>
+              <h2>Get ChemRender — free, for macOS, Windows, or the browser.</h2>
             </div>
           </div>
           <div class="download-grid">
@@ -292,14 +307,22 @@
               </a>
               <span>x64 .zip. Windows may warn "unknown publisher" — click More info → Run anyway.</span>
             </article>
+            <article class="download-card">
+              <h3>Browser</h3>
+              <p>Try it without installing. Easiest way to test in 30 seconds.</p>
+              <a class="button button-primary" href="./app/" data-gc-event="use-in-browser">
+                Use in Browser
+              </a>
+              <span>Clipboard import may need a few extra paste clicks in the browser.</span>
+            </article>
           </div>
-          <p class="trust-line">Free during beta. No account required. Bring your own AI model.</p>
+          <p class="trust-line">Free study tool. No account required. No AI subscription. Bring your own AI tutor.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Built by a pre-med student for surviving organic chemistry. Free during beta.</p>
+      <p>Built by a pre-med student for surviving organic chemistry. A free study tool — bring your own AI tutor.</p>
       <p class="footer-links">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeavJxfLOB9SOMm9ojJX6Yog3z8cl30XIaRiHwqFiQlhDHEUg/viewform" target="_blank" rel="noopener" data-gc-event="feedback-form">Send feedback</a>
         <span aria-hidden="true">·</span>
@@ -307,6 +330,7 @@
         <span aria-hidden="true">·</span>
         <a href="#top">Back to top</a>
       </p>
+      <p class="footer-legal">© 2026 Bridger Brundy. ChemRender is free to use. Source code is not currently open source.</p>
     </footer>
     <script src="./analytics.js" defer></script>
   </body>

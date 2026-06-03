@@ -347,7 +347,7 @@ p {
 
 .download-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
@@ -585,11 +585,18 @@ kbd {
 
 .site-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 20px 0 36px;
   border-top: 1px solid var(--line);
+}
+
+.footer-legal {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 0.85rem !important;
 }
 
 .site-footer p {
@@ -724,6 +731,23 @@ kbd {
 
 .free-list li {
   line-height: 1.5;
+}
+
+.browser-section .section-inner {
+  padding: 32px;
+  border-left: 5px solid var(--amber);
+  background: var(--surface-warm);
+}
+
+.browser-section h2 {
+  max-width: 22ch;
+}
+
+.browser-section p {
+  max-width: 70ch;
+  margin: 18px 0 0;
+  color: #d5c4a1;
+  font-size: 1.08rem;
 }
 
 a.tutorial-card {
@@ -904,6 +928,7 @@ a.tutorial-card:focus-visible {
 
   .pain-section .section-inner,
   .free-section .section-inner,
+  .browser-section .section-inner,
   .cta-panel {
     padding: 22px;
   }
