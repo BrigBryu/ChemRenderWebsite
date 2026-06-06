@@ -118,9 +118,9 @@ h3 {
 }
 
 h1 {
-  max-width: 13ch;
-  font-size: clamp(2.5rem, 4vw, 3.9rem);
-  line-height: 1;
+  max-width: 14ch;
+  font-size: clamp(2.2rem, 3.2vw, 3.1rem);
+  line-height: 1.04;
 }
 
 h2 {
@@ -903,7 +903,7 @@ a.tutorial-card:focus-visible {
   }
 
   h1 {
-    font-size: clamp(2.2rem, 10vw, 3.1rem);
+    font-size: clamp(2rem, 9vw, 2.7rem);
   }
 
   .section {
