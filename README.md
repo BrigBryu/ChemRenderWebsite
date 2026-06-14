@@ -2,6 +2,19 @@
 
 Static GitHub Pages site for the ChemRender product.
 
+## Changelog
+
+`../text-to-chem/CHANGELOG.md` is the source of truth for the public changelog.
+After editing it, run:
+
+```sh
+node scripts/sync-changelog.mjs
+```
+
+This regenerates `changelog.html`, which should be committed with the website.
+`./update-browser-app.sh` also refreshes the changelog after rebuilding the
+browser app.
+
 ## Browser version (`app/`)
 
 `app/` holds the **built** browser version of ChemRender — the minified

@@ -854,6 +854,25 @@ a.tutorial-card:focus-visible {
   font-size: 0.9em;
 }
 
+.changelog-entry {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.changelog-entry:first-of-type {
+  border-top: 0;
+}
+
+.changelog-subhead {
+  margin: 20px 0 8px;
+  color: var(--ink);
+  font-size: 1.08rem;
+}
+
+.changelog-list {
+  padding-left: 22px;
+}
+
 .doc-next {
   padding-top: 24px;
   border-top: 1px solid var(--line);

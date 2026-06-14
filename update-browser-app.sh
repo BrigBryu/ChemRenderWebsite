@@ -71,4 +71,5 @@ fi
 
 # 9. Done.
 echo "✓ Browser app updated -> $APP_DIR"
+node "$SCRIPT_DIR/scripts/sync-changelog.mjs"
 echo "  Commit the app/ folder in this repo to publish it."

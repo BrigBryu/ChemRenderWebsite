@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#282828" />
+    <meta
+      name="description"
+      content="ChemRender changelog: product history, new features, fixes, and release notes for the organic chemistry study card renderer."
+    />
+    <title>Changelog - ChemRender</title>
+    <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/icon.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="ChemRender home">
+        <img src="./assets/logo.png" alt="" width="42" height="31" />
+        <span>ChemRender</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="./index.html#how">How it works</a>
+        <a href="./index.html#features">Features</a>
+        <a href="./index.html#download">Download</a>
+        <a href="./index.html#tutorials">Tutorials</a>
+        <a href="./changelog.html" aria-current="page">Changelog</a>
+      </nav>
+    </header>
+
+    <main id="top" class="doc">
+      <p class="doc-back"><a href="./index.html">&larr; Home</a></p>
+      <p class="eyebrow">Product history</p>
+      <h1 class="doc-title">ChemRender changelog</h1>
+      <p class="lede">
+        A running history of notable ChemRender updates, generated from the app changelog.
+      </p>
+
+        <p>Notable changes to Text to Chem, reconstructed from git history. This repository does not currently use release tags, so entries are grouped by commit date.</p>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">0.1.2 - 2026-06-13</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added a centralized settings system grouped into Rendering, Cards, Import &amp; Packages, Appearance, Keyboard, Help &amp; Docs, and Advanced, with a settings search.</li>
+          <li>Added global and per-card zoom, plus a three-dots card menu for copy, export, zoom, replace, and delete.</li>
+          <li>Added a configurable header (keep open or auto-hide), card density, caption visibility, and reduced-motion options.</li>
+          <li>Added a Copy dropdown that builds the AI prompt from parts (base format, arrows, stereochemistry, radicals).</li>
+          <li>Added signed and notarized macOS release tooling, including a local signing kit and a <code>desktop:sign</code> script.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Simplified molecule cards into a passive reader: removed card numbers and the selected-card model, and made <code>j</code>/<code>k</code> scroll the page vertically.</li>
+          <li>Reworked the top bar to two core actions, Import and Copy (the AI prompt), alongside a settings gear.</li>
+          <li>Moved per-card actions behind a hover/focus Details button and a three-dots menu instead of an always-visible action row.</li>
+          <li>Made the Import button run the configured workflow (clipboard or paste box, replace or add) in one click.</li>
+          <li>Made package tabs optional and hidden by default.</li>
+          <li>Kept the settings dialog at a fixed height so it no longer resizes when switching sections.</li>
+        </ul>
+        <h3 class="changelog-subhead">Removed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Removed settings that did not yet affect rendering (formal-charge, atom-label, and functional-group toggles, molecule size, key hints, and navigation feedback) so the settings stay honest.</li>
+          <li>Removed the separate prompt-guide buttons from the top bar in favor of the Copy dropdown.</li>
+        </ul>
+        <h3 class="changelog-subhead">Fixed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Fixed per-card zoom so the molecule drawing actually scales.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">0.1.1 - 2026-06-12</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added stereochemistry descriptor support, including stereo descriptor parsing/rendering and focused tests.</li>
+          <li>Added prompt, settings-store, SVG export, toast, and app-template modules as part of the main application split.</li>
+          <li>Added tests for stereo parsing, stereo descriptors, and expanded parser behavior.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Modularized the large <code>main.js</code> application entry point into smaller source modules.</li>
+          <li>Updated renderer, annotations, parser, keybinding, and export behavior to support the new stereo workflow.</li>
+          <li>Updated Tauri and package metadata for the current desktop app build.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-06-03</h2>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Changed tutorial links to open on the public website instead of inside an in-app tutorial modal.</li>
+          <li>Set the browser tab title to ChemRender.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-06-02</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added a Windows installer build script.</li>
+          <li>Added <code>.env.local</code> to ignored local environment files.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Rebranded desktop packaging from Text to Chem toward Chem Render naming.</li>
+          <li>Updated macOS release script and Tauri configuration for the rebrand.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-06-01</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added the Tauri desktop app release path with native clipboard support, macOS release workflow, release script, Tauri configuration, and release documentation.</li>
+          <li>Added clipboard import/replace handling for desktop clipboard workflows.</li>
+          <li>Added keybinding settings and tests.</li>
+          <li>Added functional group detection patterns and highlighting support.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Collapsed and refined the top toolbar/chrome behavior, including auto-hide fixes.</li>
+          <li>Removed the earlier GitHub Pages deployment path from the app repository.</li>
+          <li>Updated release and macOS distribution documentation.</li>
+        </ul>
+        <h3 class="changelog-subhead">Fixed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Fixed duplicate functional group detection.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-05-30</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added vim-style keyboard navigation and richer keyboard-driven card workflows.</li>
+          <li>Added card navigation feedback options, including off, left, middle, and right positions.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Improved the main UI, renderer integration, annotations, color theme, and card interaction styling.</li>
+          <li>Made card navigation feedback configurable and off by default.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-05-29</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Added privacy-preserving GoatCounter usage analytics behind configuration.</li>
+          <li>Added GitHub Pages release scaffolding, service worker, web app manifest, and public icons.</li>
+          <li>Added SVG/PNG export controls for molecule cards.</li>
+          <li>Added project license file.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Restored the package import workflow.</li>
+          <li>Polished the local renderer workflow, demo content, export controls, top bar, logo, favicon, and README/deployment notes.</li>
+          <li>Updated GitHub Pages automation to use Node 24.</li>
+        </ul>
+      </section>
+      <section class="doc-section changelog-entry">
+        <h2 class="doc-h2">2026-05-28</h2>
+        <h3 class="changelog-subhead">Added</h3>
+        <ul class="doc-list changelog-list">
+          <li>Created the initial Text to Chem local renderer for structured molecule-card notes.</li>
+          <li>Added parsing for <code>::mol</code> blocks, SMILES rendering, lone pairs, formal charges, captions, atom references, and curved-arrow annotations.</li>
+          <li>Added the initial Vite app structure, renderer, annotation, arrow, parser, theme, and stylesheet modules.</li>
+          <li>Added parser and arrow workflow tests.</li>
+        </ul>
+        <h3 class="changelog-subhead">Changed</h3>
+        <ul class="doc-list changelog-list">
+          <li>Stabilized parser and arrow workflows after the initial implementation.</li>
+          <li>Polished the local renderer workflow.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ChemRender is a free organic chemistry study renderer. Bring your own AI model.</p>
+      <p class="footer-links">
+        <a href="mailto:bridger.brundy@gmail.com?subject=ChemRender%20issue">Report an issue or contact me</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="./index.html">Home</a>
+      </p>
+    </footer>
+    <script src="./analytics.js" defer></script>
+  </body>
+</html>
